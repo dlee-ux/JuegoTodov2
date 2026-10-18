@@ -1,0 +1,24 @@
+.contacto-container {
+  max-width: 550px;
+}
+
+.contacto-titulo {
+  color: #3afff8;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.contacto-textarea {
+  background-color: #141414 !important;
+  color: #ffffff !important;
+  border: 1px solid #3afff8 !important;
+  border-radius: 10px !important;
+  resize: none;
+}
+
+.contacto-textarea:focus {
+  background-color: #141414 !important;
+  color: #ffffff !important;
+  border-color: #3afff8 !important;
+  box-shadow: 0 0 10px rgba(58, 255, 248, 0.4) !important;
+}
