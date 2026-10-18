@@ -1,6 +1,7 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/organisms/Navbar';
-import Footer from './components/organisms/Footer'; // 👈 Importamos el Footer
+import Footer from './components/organisms/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
@@ -9,15 +10,14 @@ import Login from './pages/Login';
 import Favoritos from './pages/Favoritos';
 import Ofertas from './pages/Ofertas';
 import Admin from './pages/Admin';
+import './styles/app.css';
 
 function App() {
   return (
-    // Reemplazamos el <> </> por un div con Flexbox para empujar el footer hacia abajo
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="app-container">
       <NavBar />
-      
-      {/* Este div con flex: '1' ocupa todo el espacio sobrante y empuja el footer */}
-      <div style={{ flex: '1' }}>
+
+      <main className="app-main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -28,9 +28,8 @@ function App() {
           <Route path="/ofertas" element={<Ofertas />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      </div>
+      </main>
 
-      {/* 👇 Aquí colocamos el Footer al final */}
       <Footer />
     </div>
   );
