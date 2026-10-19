@@ -1,0 +1,27 @@
+.ofertas-subtitulo {
+  text-align: center;
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ofertas-vacio-box {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 3rem;
+  text-align: center;
+  background-color: #141414;
+  border: 2px solid #3afff8;
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(58, 255, 248, 0.2);
+}
+
+.ofertas-vacio-titulo {
+  color: #3afff8;
+  font-weight: bold;
+}
+
+.ofertas-vacio-texto {
+  color: #cccccc;
+  margin-top: 10px;
+}

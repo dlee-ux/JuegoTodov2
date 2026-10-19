@@ -1,0 +1,279 @@
+body {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Barra de navegación con 3 columnas para que el logo quede 100% al centro */
+.juegotodo-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161616;
+  border: 2px solid #3afff8;
+  border-radius: 14px;
+  margin: 20px auto 30px auto;
+  padding: 10px 25px;
+  max-width: 95%;
+  box-shadow: 0 0 12px rgba(58, 255, 248, 0.25);
+}
+
+.header-col-izq {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-col-centro {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+.logo-header-central {
+  height: 75px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.logo-header-central:hover {
+  transform: scale(1.05);
+}
+
+.header-col-der {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.saludo-usuario {
+  color: #3afff8;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Botón de 3 líneas (Hamburguesa) siempre a la izquierda */
+.btn-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 46px;
+  height: 38px;
+  padding: 9px 10px;
+  background-color: transparent;
+  border: 2px solid #3afff8;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(58, 255, 248, 0.2);
+}
+
+.btn-hamburguesa span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #3afff8;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.btn-hamburguesa:hover {
+  background-color: #3afff8;
+  box-shadow: 0 0 14px #3afff8;
+}
+
+.btn-hamburguesa:hover span {
+  background-color: #0b0b0b;
+}
+
+/* Enlaces del panel lateral (Offcanvas) */
+.item-menu-lateral {
+  color: #3afff8 !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.25s ease;
+}
+
+.item-menu-lateral.sub {
+  font-size: 0.92rem;
+  padding: 7px 14px;
+}
+
+.item-menu-lateral:hover {
+  background-color: rgba(58, 255, 248, 0.12);
+  border-color: #3afff8;
+  color: #ffffff !important;
+  transform: translateX(5px);
+}
+
+/* Botón Iniciar / Cerrar Sesión */
+.btn-sesion-neon {
+  border: 1.5px solid #3afff8;
+  border-radius: 8px;
+  padding: 6px 16px;
+  color: #3afff8 !important;
+  background: transparent;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.btn-sesion-neon:hover {
+  background-color: #3afff8 !important;
+  color: #0b0b0b !important;
+  box-shadow: 0 0 12px #3afff8;
+}
+
+/* Títulos de sección */
+.titulo-seccion {
+  text-align: center;
+  color: #3afff8;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 25px 0 12px 0;
+  text-transform: uppercase;
+}
+
+/* Caja de Catálogo (En PC grande: 5 en fila) */
+.catalogo-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border: 2px solid #3afff8;
+  border-radius: 20px;
+  padding: 18px;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto 45px auto;
+  background-color: #0b0b0b;
+  box-shadow: 0 0 15px rgba(58, 255, 248, 0.2);
+}
+
+.categoria-card-interactiva {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.categoria-card-interactiva img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.categoria-card-interactiva:hover {
+  transform: translateY(-6px) scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(58, 255, 248, 0.7));
+  z-index: 2;
+}
+
+.categoria-card-interactiva.activa {
+  transform: translateY(-4px) scale(1.03);
+  filter: drop-shadow(0 0 15px #3afff8);
+}
+
+/* =========================================================
+   📱 MODO RESPONSIVO (Al achicar la ventana o en Celular)
+   ========================================================= */
+@media (max-width: 992px) {
+  .juegotodo-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+    border: 2px solid #3afff8;
+    border-radius: 14px;
+    margin: 20px auto 30px auto;
+    padding: 10px 25px;
+    width: 95% !important;         /* 👈 FORZADO */
+    max-width: 1150px !important;  /* 👈 FORZADO */
+    box-shadow: 0 0 12px rgba(58, 255, 248, 0.25);
+  }
+
+  .logo-header-central {
+    height: 55px;
+  }
+
+  .header-col-der {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .saludo-usuario {
+    font-size: 0.8rem;
+  }
+
+  .btn-sesion-neon {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Agranda las 5 categorías del Catálogo (de 2 en 2 grandes) */
+  .catalogo-box {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    padding: 20px !important;
+  }
+
+  .categoria-card-interactiva {
+    flex: 0 1 calc(50% - 12px) !important;
+    max-width: 240px !important;
+  }
+  .footer-link-atom {
+  color: #cccccc !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .footer-link-atom:hover {
+    color: #3afff8 !important;
+    text-shadow: 0 0 8px #3afff8; 
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-header-central {
+    height: 44px;
+  }
+
+  .catalogo-box {
+    gap: 12px !important;
+    padding: 14px !important;
+  }
+
+  .categoria-card-interactiva {
+    flex: 0 1 calc(50% - 8px) !important;
+    max-width: 185px !important;
+  }
+}
